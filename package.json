@@ -1,6 +1,6 @@
 {
   "name": "create-spown-module",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "CLI to create a project with predefined templates",
   "homepage": "https://github.com/Spown-dev/cli",
   "bin": {
