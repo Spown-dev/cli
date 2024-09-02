@@ -1,0 +1,30 @@
+{
+  "name": "create-spown-module",
+  "version": "1.0.1",
+  "description": "CLI to create a project with predefined templates",
+  "bin": {
+    "create-spown-module": "./src/index.js"
+  },
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "type": "module",
+  "keywords": [
+    "CLI",
+    "Spown.dev",
+    "module",
+    "generator",
+    "templates"
+  ],
+  "author": "Spown.dev",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "cli-progress": "^3.12.0",
+    "commander": "^9.0.0",
+    "create-spown-module": "^1.0.0",
+    "degit": "^2.8.0",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^8.0.0"
+  }
+}

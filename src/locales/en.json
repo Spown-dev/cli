@@ -1,0 +1,12 @@
+{
+  "welcome": "📦 Welcome to the Spown.dev Module CLI!",
+  "letsCreateSomething": "Let's create something amazing today!",
+  "selectModuleType": "Choose your module type:",
+  "selectTechStack": "Choose your technology stack:",
+  "enterModuleName": "Enter the module name:",
+  "enterVersion": "Enter the version:",
+  "enterAuthor": "Enter the author name:",
+  "generating": "Generating module...",
+  "success": "✅ Module created successfully!",
+  "instructions": "To get started, run:"
+}

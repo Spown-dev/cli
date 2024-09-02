@@ -1,0 +1,12 @@
+{
+  "welcome": "📦 Willkommen bei Spown.dev!",
+  "letsCreateSomething": "Lassen Sie uns etwas wunderbares heute erstellen!",
+  "selectModuleType": "Wählen Sie Ihren Module-Typ:",
+  "selectTechStack": "Wählen Sie Ihre Technologie:",
+  "enterModuleName": "Geben Sie den Modulnamen ein:",
+  "enterVersion": "Geben Sie die Version ein:",
+  "enterAuthor": "Geben Sie den Namen des Autors ein:",
+  "generating": "Generieren des Moduls...",
+  "success": "✅ Modul erfolgreich erstellt!",
+  "instructions": "Um loszulegen, führen Sie:"
+}
