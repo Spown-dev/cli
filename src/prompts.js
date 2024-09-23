@@ -23,25 +23,30 @@ export const askModuleQuestions = (messages) => {
       name: "moduleType",
       message: messages.selectModuleType,
       choices: [
-        { name: "Page Module", value: "module-page" },
-        { name: "Home Block Module", value: "module-block-home" },
-        { name: "Profile Block Module", value: "module-block-profile" },
-      ],
-    },
-    {
-      type: "list",
-      name: "techStack",
-      message: messages.selectTechStack,
-      choices: [
-        { name: "React + Tailwind", value: "react-tailwind" },
-        { name: "React + CSS", value: "react-css" },
-        { name: "HTML + CSS", value: "html-css" },
+        { name: messages.moduleTypes.page, value: "module-page" },
+        { name: messages.moduleTypes.home, value: "module-block-home" },
+        { name: messages.moduleTypes.profile, value: "module-block-profile" },
       ],
     },
     {
       type: "input",
       name: "moduleName",
       message: messages.enterModuleName,
+      default: messages.placeholders.moduleName,
+      filter: (input) =>
+        input === messages.placeholders.moduleName ? "" : input,
+      validate: (input) =>
+        input && input !== messages.placeholders.moduleName
+          ? true
+          : messages.errorModuleName,
+    },
+    {
+      type: "input",
+      name: "customName",
+      message: messages.enterCustomName,
+      default: messages.placeholders.customName,
+      filter: (input) =>
+        input === messages.placeholders.customName ? "" : input,
     },
     {
       type: "input",
@@ -51,8 +56,42 @@ export const askModuleQuestions = (messages) => {
     },
     {
       type: "input",
-      name: "author",
-      message: messages.enterAuthor,
+      name: "path",
+      message: messages.enterPath,
+      default: (answers) => {
+        if (answers.moduleType === "module-page") {
+          return "/mypage";
+        } else if (answers.moduleType === "module-block-home") {
+          return "home_mymodule";
+        } else if (answers.moduleType === "module-block-profile") {
+          return "mypage";
+        }
+        return messages.enterPath;
+      },
+      filter: (input) => (input === messages.enterPath ? "" : input),
+    },
+    {
+      type: "input",
+      name: "contributors",
+      message: messages.contributors,
+      filter: (input) => (input === "" ? null : input),
+      when: async (answers) => {
+        const contributors = [];
+        while (true) {
+          const { contributor } = await inquirer.prompt([
+            {
+              type: "input",
+              name: "contributor",
+              message: messages.contributors,
+            },
+          ]);
+
+          if (!contributor) break;
+          contributors.push(contributor);
+        }
+        answers.contributors = contributors;
+        return false;
+      },
     },
   ]);
 };

@@ -5,16 +5,20 @@ import chalk from "chalk";
 import cliProgress from "cli-progress";
 
 export const createModule = async (
-  { moduleType, techStack, moduleName, version, author },
+  {
+    moduleType,
+    moduleName,
+    version,
+    contributors,
+    customName,
+    path: customPath,
+  },
   messages
 ) => {
   console.log("");
   console.log(chalk.green(messages.generating));
 
-  const moduleTypeDir = moduleType;
-  const techStackDir = techStack;
-
-  const repo = `Spown-dev/templates/${moduleTypeDir}/${techStackDir}`;
+  const repo = `Spown-dev/templates/${moduleType}`;
 
   const targetDir = path.join(process.cwd(), moduleName);
 
@@ -56,7 +60,14 @@ export const createModule = async (
 
       packageJson.name = moduleName;
       packageJson.version = version;
-      packageJson.author = author;
+      packageJson.contributors = contributors;
+
+      packageJson.customData = {
+        name: customName,
+        scope: moduleName,
+        path: customPath,
+        type: moduleType.split("-").pop(),
+      };
 
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
     }

@@ -2,6 +2,18 @@
   "welcome": "📦 Welcome to the Spown.dev Module CLI!",
   "letsCreateSomething": "Let's create something amazing today!",
   "selectModuleType": "Choose your module type:",
+  "moduleTypes": {
+    "page": "Page Module",
+    "home": "Home Block Module",
+    "profile": "Profile Block Module"
+  },
+  "placeholders": {
+    "moduleName": "module_name",
+    "customName": "My new module",
+    "contributor": "Snooze"
+  },
+  "errorModuleName": "❌ Please enter a valid module name!",
+  "contributors": "Add a contributor (or leave blank to finish):",
   "selectTechStack": "Choose your technology stack:",
   "enterModuleName": "Enter the module name:",
   "enterVersion": "Enter the version:",

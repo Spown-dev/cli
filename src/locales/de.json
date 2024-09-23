@@ -1,12 +1,24 @@
 {
-  "welcome": "📦 Willkommen bei Spown.dev!",
-  "letsCreateSomething": "Lassen Sie uns etwas wunderbares heute erstellen!",
-  "selectModuleType": "Wählen Sie Ihren Module-Typ:",
-  "selectTechStack": "Wählen Sie Ihre Technologie:",
-  "enterModuleName": "Geben Sie den Modulnamen ein:",
-  "enterVersion": "Geben Sie die Version ein:",
-  "enterAuthor": "Geben Sie den Namen des Autors ein:",
-  "generating": "Generieren des Moduls...",
+  "welcome": "📦 Willkommen bei der Spown.dev Module CLI!",
+  "letsCreateSomething": "Lass uns heute etwas Erstaunliches erschaffen!",
+  "selectModuleType": "Wähle deinen Modultyp:",
+  "moduleTypes": {
+    "page": "Seitenmodul",
+    "home": "Startseitenblockmodul",
+    "profile": "Profilblockmodul"
+  },
+  "placeholders": {
+    "moduleName": "modul_name",
+    "customName": "Mein neues Modul",
+    "contributor": "Snooze"
+  },
+  "errorModuleName": "❌ Bitte gib einen gültigen Modulnamen ein!",
+  "contributors": "Füge einen Mitwirkenden hinzu (oder lasse es leer, um abzuschließen):",
+  "selectTechStack": "Wähle deinen Technologiestack:",
+  "enterModuleName": "Gib den Modulnamen ein:",
+  "enterVersion": "Gib die Version ein:",
+  "enterAuthor": "Gib den Autorennamen ein:",
+  "generating": "Modul wird generiert...",
   "success": "✅ Modul erfolgreich erstellt!",
-  "instructions": "Um loszulegen, führen Sie:"
+  "instructions": "Um zu starten, führe aus:"
 }
